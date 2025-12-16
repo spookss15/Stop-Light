@@ -1,11 +1,16 @@
 int 4 = red;
 int 5 = yellow;
 int 6 = green;
+// these names these pins respective to color for easier writing //
 void setup();
 pinMode(red, OUTPUT);
 pinMode(green, OUTPUT);
 pinMode(yellow, OUTPUT);
+// this sets the pins as an output, we are outputting voltage from a pin to an led
 void loop()
+// this is the code that allows the lights to act as a stop light. We send an output to a light, delay 5000milliseconds//
+// or 5 seconds, then we turn off the first light and switch to the next light. I put a 50ms delay in that is not visible to// 
+// the human eye
 digitalWrite(green, HIGH);
 delay(5000);
 digitalWrite(green, LOW);
@@ -18,3 +23,4 @@ digitalWrite(red, HIGH);
 delay(5000);
 digitalWrite(red, LOW);
 delay(50);
+// this is the end of the loop. The program will continue to repeat from the start of the loop again when finished
