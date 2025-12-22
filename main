@@ -1,14 +1,15 @@
-int 4 = red;
-int 5 = yellow;
-int 6 = green;
+int red = 4;
+int yellow = 5;
+int green = 6;
 // these names these pins respective to color for easier writing. If changes need to be made, we can change the "int" number instead
 // of changing the pin number for every command we give it
-void setup();
+void setup(){
 pinMode(red, OUTPUT);
 pinMode(green, OUTPUT);
 pinMode(yellow, OUTPUT);
 // this sets the pins as an output, we are outputting voltage from a pin to an led
-void loop()
+}
+void loop(){
 // this is the code that allows the lights to act as a stop light. We send an output to a light, it lights up, delay 5000milliseconds//
 // or 5 seconds, then we turn off the first light and switch to the next light. I put a 50ms delay in that is not visible to// 
 // the human eye
@@ -25,3 +26,4 @@ delay(5000);
 digitalWrite(red, LOW);
 delay(50);
 // this is the end of the loop. The program will continue to repeat from the start of the loop again
+}
